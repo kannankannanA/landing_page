@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png"> 
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <title>Frontend Mentor | Clipboard landing page</title>
+</head>
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Black+Ops+One&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Rubik+Doodle+Shadow&display=swap');
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Bai Jamjuree;
+    padding: 2px;
+  }
+  body{
+    background-color:#fafafa;
+  }
+  .main{
+    height:100% ;
+    max-width:100% ;
+    background-color:#fafafa;
+    display: flex;
+    flex-direction:column;
+    flex-wrap: nowrap;
+    align-items: center;
+    row-gap: 30px;
+  }
+  .logo{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    width: 100%;
+    height:350px ;
+    background-image: url(images/bg-header-desktop.png);
+    background-size: cover;
+    padding-bottom: 10px;
+   
+  }
+  .log{
+    height:150px ;
+    width:150px ;
+  }
+  
+  .tex1{
+    margin-top: 20px;
+    font-size: 3rem;
+    font-weight: 500;
+    text-align: center;
+  }
+  .tex2{
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    height:100px ;
+    max-width:960px ;
+  }
+  .but{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    justify-content: space-evenly;
+    row-gap: 20px;
+    column-gap: 20px; 
+  }
+  .bt1{
+    background-color: hsl(171, 66%, 44%);
+    height:45px ;
+    width:220px ;
+    text-align: center;
+    padding-top: 12px;
+    border-radius: 35px;
+    box-shadow: 1px 1px 5px 0px hsla(171, 66%, 44%, 0.884);
+    cursor: pointer;
+
+  }
+  .bt2{
+    padding-top: 12px;
+    text-align: center;
+    height:45px ;
+    width:220px ;
+    background-color:  hsl(233, 100%, 69%);
+    border-radius: 35px;
+    box-shadow: 1px 1px 5px 0px hsl(233, 100%, 69%);
+    cursor: pointer;
+
+  }
+  .tex3{
+    margin-top: 120px;
+    font-size: 3rem;
+    font-weight: 500;
+    text-align: center;
+
+  }
+  .tex4{
+    max-height:150px ;
+    max-width:960px ;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+
+  }
+  .main2{
+    margin-top: 60px;
+    height:100% ;
+    max-width:100% ;
+    background-color:#fafafa;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    row-gap: 10px;
+    column-gap: 80px;
+    
+  }
+  .img1{
+   min-height:470px ;
+   width:670px ;
+   background-image: url(images/image-computer.png);
+   background-repeat: no-repeat;
+   background-size: contain;
+   margin-left: -30px;
+  }
+  .t1{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 50px;
+  }
+  .q1{
+    text-align: left;
+    font-size: 1.7rem;
+    font-weight: 500;
+  }
+  .w1{
+    text-align: left;
+    font-size:18px;
+    font-weight: 400;
+  }
+  .main3{
+    margin-top: 100px;
+    max-width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    row-gap: 30px;
+    justify-content: center;
+   
+    padding-bottom: 20px;
+  }
+  .e1{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 500;
+    text-align: center;
+  }
+  .e2{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+  }
+  .e3{
+    margin-top: 10px;
+    max-width:58% ;
+    max-height:540px ;
+  }
+  .e3 img{
+    max-width:100% ;
+    max-height:100% ;
+  }
+  .e4{
+    
+    font-size: 3rem;
+    font-weight: 500;
+    text-align: center;
+  }
+  .e5{
+    font-size:18px;
+    font-weight: 400;
+    text-align: center;
+
+  }
+  .main4{
+    margin-top: 50px;
+    height:100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .l1{
+    font-weight: 500;
+    font-size: 1.7rem;
+  }
+  .l2{
+    font-weight: 400;
+    font-size: 20px;
+  }
+  .k1{
+    height:320px ;
+    width:370px ;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+  }
+  .k2{
+    height:320px ;
+    width:370px ;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+  }
+  .k3{
+    height:320px ;
+    width:370px ;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .main5{
+    margin-top: 70px;
+    max-width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 185px;
+    row-gap: 100px;
+    justify-content:center ;
+  }
+  .m1{
+    height:39px ;
+    width:135px ;
+  }
+  .main6{
+    margin-top: 100px;
+    max-width: 100%;
+    height:100%;
+    display: flex;
+    flex-direction:column;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .j1{
+    font-size: 3rem;
+    font-weight: 500;
+    text-align: center;
+  }
+  .op{
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+  }
+  .but1{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 40px;
+    column-gap: 40px;
+  }
+  .bt3{
+    background-color: hsl(171, 66%, 44%);
+    height:45px ;
+    width:220px ;
+    text-align: center;
+    padding-top: 12px;
+    border-radius: 35px;
+    box-shadow: 1px 1px 5px 0px hsla(171, 66%, 44%, 0.884);
+    cursor: pointer;
+  }
+  .bt4{
+    padding-top: 12px;
+    text-align: center;
+    height:45px ;
+    width:220px ;
+    background-color:  hsl(233, 100%, 69%);
+    border-radius: 35px;
+    box-shadow: 1px 1px 5px 0px hsl(233, 100%, 69%);
+    cursor: pointer;
+  }
+  .foo{
+    padding: 40px;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-evenly;
+    background-color: #d4d4d4;
+    align-items: center;
+  }
+  .o1 img{
+    height:90px ;
+    width:90px ;
+    cursor: pointer;
+  }
+  .o2,.o3,.o4{
+    font-size: 1.4rem;
+    cursor: pointer;
+    line-height: 40px;
+  }
+  .vv{
+    text-align: left;
+  }
+  .vv:hover{
+    text-decoration: underline;
+  }
+  .o5{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+  }
+  .o5 img{
+    cursor: pointer;
+    transition: .2s ease-in;
+  }
+  .o5 img:hover{
+    scale: 1.3;
+  }
+  @media screen and (max-width:491px) {
+    .foo{
+      justify-content: center;
+      flex-direction: column;
+      row-gap:5px;
+    }
+    .o2,.o3,.o4{
+      height:80px ;
+      max-width:170px ;
+    }
+    .vv{
+      text-align: center;
+    }
+    .t1{
+      margin-top: 0;
+    }
+    
+  }
+  @media screen and (max-width:1099px) {
+    .main2{
+    margin-top: 80px;
+    height:100% ;
+    max-width:100% ;
+    background-color:#fafafa;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    justify-content: center;
+    column-gap: 80px;
+  }
+  .img1{
+    margin-left: 0;
+    height:380px ;
+   
+  }
+  .q1{
+    font-size: 1.7rem;
+    font-weight: 500;
+    text-align: center;
+  }
+  .w1{
+    font-size:18px;
+    font-weight: 400;
+    text-align: center;
+  }
+  }
+  @media screen and (max-width:301px) {
+  .img1{
+    height:250px ;
+  }
+}
+.attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+</style>
+<body>
+  <!--main1-->
+<section class="sec1">
+  <div class="main">
+    <div class="logo"><img src="images/logo.svg" alt="logo" class="log"></div>
+    <div data-aos="zoom-in-right">
+    <div class="tex1"><p>A history of everything you copy</p></div>
+    <div class="tex2"><p>Clipboard allows you to track and organize everything you 
+      copy. Instantly access your clipboard on all your devices.</p></div>
+    <div class="but">
+      <div class="bt1">Download for iOS</div>
+      <div class="bt2">Download for Mac</div>
+    </div>
+    </div>
+    <div data-aos="zoom-in-right"><div class="tex3">Keep track of your snippets</div>
+    <div class="tex4">Clipboard instantly stores any item you copy in the cloud, 
+      meaning you can access your snippets immediately on all your 
+      devices. Our Mac and iOS apps will help you organize everything.</div>
+  </div>
+  </div>
+</section>
+  <!--main2-->
+<section class="sec2">
+  <div class="main2">
+    <div data-aos="zoom-in-right">
+    <div class="img1"></div>
+    </div>
+    <div data-aos="zoom-in-left">
+    <div class="t1">
+      <div class="t2"><p class="q1">Quick Search</p><p class="w1">Easily search your snippets by content, category, web address, application, and more.</p></div>
+      <div class="t3"><p class="q1">iCloud Sync</p><p class="w1">Instantly saves and syncs snippets across all your devices.</p></div>
+      <div class="t4"><p class="q1"> Complete History</p><p class="w1">Retrieve any snippets from the first moment you started using the app.</p></div>
+    </div>
+  </div>
+  </div>
+</section>  
+  <!--main3-->
+<section class="sec3">
+  <div data-aos="zoom-in">
+  <div class="main3">
+    <div class="e1">Access Clipboard anywhere</div>
+    <div class="e2">Whether you’re on the go, or at your computer, you can access all your Clipboard 
+      snippets in a few simple clicks.</div>
+    <div class="e3"> <img src="images/image-devices.png" alt=""></div>
+    <div class="e4">Supercharge your workflow</div>
+    <div class="e5"> We’ve got the tools to boost your productivity.</div>
+  </div>
+  </div>
+</section>  
+  <!--main3-->
+<section class="sec4">
+  <div data-aos="zoom-in">
+  <div class="main4">
+    <div class="k1">
+      <div><img src="images/icon-blacklist.svg" alt=""></div>
+      <p class="l1">Create blacklists</p>
+      <p class="l2">Ensure sensitive information never makes its way to your clipboard by excluding certain sources.</p>
+    </div>
+    <div class="k2">
+      <div><img src="images/icon-text.svg" alt=""></div>
+      <p class="l1">Plain text snippets</p>
+      <p class="l2">Remove unwanted formatting from copied text for a consistent look.</p>
+    </div>
+    <div class="k3">
+      <div><img src="images/icon-preview.svg" alt=""></div>
+      <p class="l1"> Sneak preview</p>
+      <p class="l2">Quick preview of all snippets on your Clipboard for easy access.</p>
+    </div>
+  </div>
+  </div>
+</section>
+  <!--main5-->
+<section class="sec5">
+  <div data-aos="zoom-in">
+  <div class="main5">
+    <img src="images/logo-google.png" alt="logo" class="m1">
+    <img src="images/logo-ibm.png" alt="logo" class="m1">
+    <img src="images/logo-microsoft.png" alt="logo" class="m1">
+    <img src="images/logo-hp.png" alt="logo" class="m1">
+    <img src="images/logo-vector-graphics.png" alt="logo" class="m1">
+  </div>
+  </div>
+</section> 
+  <!--main6--> 
+<section class="sec6">
+  <div data-aos="fade-right">
+  <div class="main6">
+    <div class="j1"> Clipboard for iOS and Mac OS</div>
+    <div class="op">Available for free on the App Store. Download for Mac or iOS, sync with iCloud 
+      and you’re ready to start adding to your clipboard.</div>
+    <div class="but1">
+      <div class="bt3"> Download for iOS</div>
+      <div class="bt4">Download for Mac</div>
+    </div>
+  </div>
+  </div>
+</section>
+  <!--footer-->
+<footer>
+  <div data-aos="fade-down">
+  <div class="foo">
+    <div class="o1"><img src="images/logo.svg" alt=""></div>
+    <div class="o2">
+      <div class="vv">FAQs</div>
+      <div class="vv">Contact Us</div>
+    </div>
+    <div class="o3">
+      <div class="vv">Privacy Policy</div>
+      <div class="vv">Press Kit</div>
+    </div>
+    <div class="o4" >
+      <div class="vv">Install Guide</div>
+    </div>
+    <div class="o5">
+      <img src="images/icon-facebook.svg" alt="">
+      <img src="images/icon-twitter.svg" alt="">
+      <img src="images/icon-instagram.svg" alt="">
+    </div>
+  </div>
+  </div>
+  <p class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">KANNAN AL</a>.
+  </p>
+</footer>  
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+</body>
+</html>
